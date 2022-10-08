@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/price-range.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/bookingViewApart.js"></script>
+  </head>
+<style>
+  body{
+  background-color: rgb(177, 207, 220);
+  margin-top: 5%;
+
+  }
+  .content{
+  background: #dde1e7;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    box-shadow: -3px -3px 7px #fffdfdb7, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  outline: none;color: #363837;
+  border-radius: 5px !important;
+  }
+ button {
+  margin: 10px 20px;
+  color: #363837;
+  /* margin-top: 40px; */
+  border-radius: 5px !important;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  width: max-content;
+  height: 50px;
+  box-shadow: -3px -3px 7px #fffdfdb7, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  outline: none;
+}
+button:hover {
+  color: rgb(26, 170, 232);
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+}
+
+</style>
+
+  <body class="container" ng-app="myApp" ng-controller="MainCtrl">
+    <main>
+      <div class="container">
+        <div class="content">
+            <form method="get" action="/admin">
+                <!--features_items-->
+
+                <h1 align="center">Apartment Booking Details</h1>
+               
+                <button
+                  type="button"
+                  ng-click="getData()"
+                >
+                  Get Order Details
+                </button>
+                <form  method="post" action="/admin">
+                  <button type="submit"  >Logout</button>
+              </form>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col"> Code</th>
+                      <th scope="col"> cost</th>
+                      <th scope="col"> name</th>
+                      <th scope="col"> katha</th>
+                      <th scope="col">customer name</th>
+                      <th scope="col">customer email id</th>
+                      <th scope="col">customer phone no</th>
+                      <th scope="col">customer address no</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr mdbTableCol ng-repeat="order in orders">
+                      <th scope="row">{{ order.pCode }}</th>
+                      <td>{{ order.pCost }}</td>
+                      <td>{{ order.hosName }}</td>
+                      <td>{{ order.pCategory }}</td>
+                      <td>{{ order.name }}</td>
+                      <td>{{ order.email }}</td>
+                      <td>{{ order.phone }}</td>
+                      <td>{{ order.addr }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

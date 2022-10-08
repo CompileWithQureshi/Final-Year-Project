@@ -1,0 +1,62 @@
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/price-range.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/bookingaprt.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/bookingApart.js"></script>
+
+</head>
+<style>
+  body    { padding-top:50px; }
+</style>
+
+<body class="container" ng-app="myApp" ng-controller="MainCtrl" >
+
+
+<main>
+   
+<div class="container" ng-init="getData()">
+<div class="content">
+  <form  method="post" action="/userhome2">
+  <button type="submit"style="background-color:lavender; class="btn btn-default" >Home</button>
+  </form>
+
+<form  method="post" action=""  >
+
+ <input type="hidden"  id="products" name="products" value="nothing">
+
+<textarea  style="display:none" id="text" name="text" > <%=products%> </textarea>
+
+<div class="features_items"><!--features_items-->
+<h2 class="title text-center">Booking Details</h2>
+
+<h1>Booking Apartment Details.</h1>
+<input type="text" name="pCode" id="pCode" placeholder="PROPERTY Code" disabled required value=""/>
+<input type="text" name="pCost" id="pCost" placeholder="PROPERTY Cost" disabled required value=""/>
+<input type="text" name="hosName" id="hosName" placeholder="PROPERTY Name" disabled required value=""/>
+<input type="text" name="katha" id="pCategory" placeholder="PROPERTY katha" disabled required value=""/>
+<h1 class="cust">Add Contact  Details.</h1>
+<input type="text"  name="name" id="name" placeholder="Customer Name" required value="" />
+
+<input type="email" name="email" id="email" placeholder="Enter email" required value=""/>
+<input type="text"   name="phone" id="phone" placeholder="Enter phone" onkeydown="return (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 8) 
+|| (event.keyCode == 9)" maxlength="10" required value="" />
+<input type="text"  name="addr" id="addr" placeholder="Customer Address" required value="" />
+<button type="button" class="btn btn-default" ng-click="submitData()" >Submit Data</button>
+</form>
+
+</div>
+</div>
+</main>
+</body>
+</html>

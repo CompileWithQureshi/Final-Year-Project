@@ -1,0 +1,432 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/price-range.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/adminregister.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/adminregister.js"></script>
+</head>
+<style>
+  body    { padding-top:50px; }
+</style>
+
+<body ng-app="myApp" ng-controller="MainCtrl">
+
+<main>
+<!--
+    <input type="hidden"  id="fname" name="fname" value="">
+    <input type="hidden"  id="sname" name="sname" value="">
+    <input type="hidden"  id="email" name="email" value="">
+    <input type="hidden"  id="password" name="password" value="">
+    <input type="hidden"  id="phone" name="phone" value="">
+    <input type="hidden"  id="dob" name="dob" value="">
+  -->
+  <div class="house" id="h"> 
+    <div class="shadows">
+      <div class="shadow-a"></div>
+      <div class="shadow-b"></div>
+    </div>
+    <div class="al">
+      <div class="al__front face"> </div>
+      <div class="al__back face"> </div>
+      <div class="al__right face"> </div>
+      <div class="al__left face"> </div>
+      <div class="al__top face"> </div>
+      <div class="al__bottom face"> </div>
+    </div>
+    <div class="ab">
+      <div class="ab__front face"> </div>
+      <div class="ab__back face"> </div>
+      <div class="ab__right face"> </div>
+      <div class="ab__left face"> </div>
+      <div class="ab__top face"> </div>
+      <div class="ab__bottom face"> </div>
+    </div>
+    <div class="at">
+      <div class="at__front face"> </div>
+      <div class="at__back face"> </div>
+      <div class="at__right face"> </div>
+      <div class="at__left face"> </div>
+      <div class="at__top face"> </div>
+      <div class="at__bottom face"> </div>
+    </div>
+    <div class="ac">
+      <div class="ac__front face"> </div>
+      <div class="ac__back face"> </div>
+      <div class="ac__right face"> </div>
+      <div class="ac__left face"> </div>
+      <div class="ac__top face"> </div>
+      <div class="ac__bottom face"> </div>
+    </div>
+    <div class="bce">
+      <div class="bce__front face"> </div>
+      <div class="bce__back face"> </div>
+      <div class="bce__right face"> </div>
+      <div class="bce__left face"> </div>
+      <div class="bce__top face"> </div>
+      <div class="bce__bottom face"> </div>
+    </div>
+    <div class="bci">
+      <div class="bci__front face"> </div>
+      <div class="bci__back face"> </div>
+      <div class="bci__right face"> </div>
+      <div class="bci__left face"> </div>
+      <div class="bci__top face"> </div>
+      <div class="bci__bottom face"> </div>
+    </div>
+    <div class="bl">
+      <div class="bl__front face"> </div>
+      <div class="bl__back face"> </div>
+      <div class="bl__right face"> </div>
+      <div class="bl__left face"> </div>
+      <div class="bl__top face"> </div>
+      <div class="bl__bottom face"> </div>
+    </div>
+    <div class="bt">
+      <div class="bt__front face"> </div>
+      <div class="bt__back face"> </div>
+      <div class="bt__right face"> </div>
+      <div class="bt__left face"> </div>
+      <div class="bt__top face"> </div>
+      <div class="bt__bottom face"> </div>
+    </div>
+    <div class="bbe">
+      <div class="bbe__front face"> </div>
+      <div class="bbe__back face"> </div>
+      <div class="bbe__right face"> </div>
+      <div class="bbe__left face"> </div>
+      <div class="bbe__top face"> </div>
+      <div class="bbe__bottom face"> </div>
+    </div>
+    <div class="bbi">
+      <div class="bbi__front face"> </div>
+      <div class="bbi__back face"> </div>
+      <div class="bbi__right face"> </div>
+      <div class="bbi__left face"> </div>
+      <div class="bbi__top face"> </div>
+      <div class="bbi__bottom face"> </div>
+    </div>
+    <div class="cl">
+      <div class="cl__front face"> 
+        <div class="lamp"></div>
+      </div>
+      <div class="cl__back face"> </div>
+      <div class="cl__right face"> </div>
+      <div class="cl__left face"> </div>
+      <div class="cl__top face"> </div>
+      <div class="cl__bottom face"> </div>
+    </div>
+    <div class="cc">
+      <div class="cc__front face"> </div>
+      <div class="cc__back face"> </div>
+      <div class="cc__right face"> </div>
+      <div class="cc__left face"> </div>
+      <div class="cc__top face"> </div>
+      <div class="cc__bottom face"> </div>
+    </div>
+    <div class="ccl">
+      <div class="ccl__front face"> </div>
+      <div class="ccl__back face"> </div>
+      <div class="ccl__right face"> </div>
+      <div class="ccl__left face"> </div>
+      <div class="ccl__top face"> </div>
+      <div class="ccl__bottom face"> </div>
+    </div>
+    <div class="cml">
+      <div class="cml__front face"> </div>
+      <div class="cml__back face"> </div>
+      <div class="cml__right face"> </div>
+      <div class="cml__left face"> </div>
+      <div class="cml__top face"> </div>
+      <div class="cml__bottom face"> </div>
+    </div>
+    <div class="cmr">
+      <div class="cmr__front face"> </div>
+      <div class="cmr__back face"> </div>
+      <div class="cmr__right face"> </div>
+      <div class="cmr__left face"> </div>
+      <div class="cmr__top face"> </div>
+      <div class="cmr__bottom face"> </div>
+    </div>
+    <div class="cmt">
+      <div class="cmt__front face"> </div>
+      <div class="cmt__back face"> </div>
+      <div class="cmt__right face"> </div>
+      <div class="cmt__left face"> </div>
+      <div class="cmt__top face"> </div>
+      <div class="cmt__bottom face"> </div>
+    </div>
+    <div class="dl">
+      <div class="dl__front face"> </div>
+      <div class="dl__back face"> </div>
+      <div class="dl__right face"> </div>
+      <div class="dl__left face"> </div>
+      <div class="dl__top face"> </div>
+      <div class="dl__bottom face"> </div>
+    </div>
+    <div class="dm">
+      <div class="dm__front face"> </div>
+      <div class="dm__back face"> </div>
+      <div class="dm__right face"> </div>
+      <div class="dm__left face"> </div>
+      <div class="dm__top face"> </div>
+      <div class="dm__bottom face"> </div>
+    </div>
+    <div class="dt">
+      <div class="dt__front face"> </div>
+      <div class="dt__back face"> </div>
+      <div class="dt__right face"> </div>
+      <div class="dt__left face"> </div>
+      <div class="dt__top face"> </div>
+      <div class="dt__bottom face"> </div>
+    </div>
+    <div class="el">
+      <div class="el__front face"></div>
+    </div>
+    <div class="ec">
+      <div class="ec__front face"></div>
+    </div>
+    <div class="er">
+      <div class="er__right face"></div>
+    </div>
+    <div class="eb">
+      <div class="eb__back face"></div>
+    </div>
+    <div class="fl">
+      <div class="fl__front face"> </div>
+      <div class="fl__back face"> </div>
+      <div class="fl__right face"> </div>
+      <div class="fl__left face"> </div>
+      <div class="fl__top face"> </div>
+      <div class="fl__bottom face"> </div>
+    </div>
+    <div class="ft">
+      <div class="ft__front face"> </div>
+      <div class="ft__back face"> </div>
+      <div class="ft__right face"> </div>
+      <div class="ft__left face"> </div>
+      <div class="ft__top face"> </div>
+      <div class="ft__bottom face"> </div>
+    </div>
+    <div class="fb">
+      <div class="fb__front face"> </div>
+      <div class="fb__back face"> </div>
+      <div class="fb__right face"> </div>
+      <div class="fb__left face"> </div>
+      <div class="fb__top face"> </div>
+      <div class="fb__bottom face"> </div>
+    </div>
+    <div class="table">
+      <div class="table__front face"> </div>
+      <div class="table__back face"> </div>
+      <div class="table__right face"> </div>
+      <div class="table__left face"> </div>
+      <div class="table__top face"> </div>
+      <div class="table__bottom face"> 
+        <div class="foot">
+          <div class="foot__front face"> </div>
+          <div class="foot__back face"> </div>
+          <div class="foot__right face"> </div>
+          <div class="foot__left face"> </div>
+          <div class="foot__top face"> </div>
+          <div class="foot__bottom face"> </div>
+        </div>
+        <div class="foot">
+          <div class="foot__front face"> </div>
+          <div class="foot__back face"> </div>
+          <div class="foot__right face"> </div>
+          <div class="foot__left face"> </div>
+          <div class="foot__top face"> </div>
+          <div class="foot__bottom face"> </div>
+        </div>
+        <div class="foot">
+          <div class="foot__front face"> </div>
+          <div class="foot__back face"> </div>
+          <div class="foot__right face"> </div>
+          <div class="foot__left face"> </div>
+          <div class="foot__top face"> </div>
+          <div class="foot__bottom face"> </div>
+        </div>
+        <div class="foot">
+          <div class="foot__front face"> </div>
+          <div class="foot__back face"> </div>
+          <div class="foot__right face"> </div>
+          <div class="foot__left face"> </div>
+          <div class="foot__top face"> </div>
+          <div class="foot__bottom face"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="kitchen">
+      <div class="kitchen__front face"> </div>
+      <div class="kitchen__back face"> </div>
+      <div class="kitchen__right face"> </div>
+      <div class="kitchen__left face"> </div>
+      <div class="kitchen__top face"> </div>
+      <div class="kitchen__bottom face"> </div>
+    </div>
+    <div class="couch">
+      <div class="couch__front face"> </div>
+      <div class="couch__back face"> </div>
+      <div class="couch__right face"> </div>
+      <div class="couch__left face"> </div>
+      <div class="couch__top face"> </div>
+      <div class="couch__bottom face"> </div>
+    </div>
+    <div class="couchb">
+      <div class="couchb__front face"> </div>
+      <div class="couchb__back face"> </div>
+      <div class="couchb__right face"> </div>
+      <div class="couchb__left face"> </div>
+      <div class="couchb__top face"> </div>
+      <div class="couchb__bottom face"> </div>
+    </div>
+    <div class="couchc">
+      <div class="couchc__front face"> </div>
+      <div class="couchc__back face"> </div>
+      <div class="couchc__right face"> </div>
+      <div class="couchc__left face"> </div>
+      <div class="couchc__top face"> </div>
+      <div class="couchc__bottom face"> </div>
+    </div>
+    <div class="couchd">
+      <div class="couchd__front face"> </div>
+      <div class="couchd__back face"> </div>
+      <div class="couchd__right face"> </div>
+      <div class="couchd__left face"> </div>
+      <div class="couchd__top face"> </div>
+      <div class="couchd__bottom face"> </div>
+    </div>
+    <div class="picture">
+      <div class="picture__front face"> </div>
+      <div class="picture__back face"> </div>
+      <div class="picture__right face"> </div>
+      <div class="picture__left face"> </div>
+      <div class="picture__top face"> </div>
+      <div class="picture__bottom face"> </div>
+    </div>
+    <div class="door-r">
+      <div class="door-r__front face"> </div>
+      <div class="door-r__back face"> </div>
+      <div class="door-r__right face"> </div>
+      <div class="door-r__left face"> </div>
+      <div class="door-r__top face"> </div>
+      <div class="door-r__bottom face"> </div>
+    </div>
+    <div class="door-l">
+      <div class="door-l__front face"> </div>
+      <div class="door-l__back face"> </div>
+      <div class="door-l__right face"> </div>
+      <div class="door-l__left face"> </div>
+      <div class="door-l__top face"> </div>
+      <div class="door-l__bottom face"> </div>
+    </div>
+    <div class="door-b">
+      <div class="door-b__front face"> </div>
+      <div class="door-b__back face"> </div>
+      <div class="door-b__right face"> </div>
+      <div class="door-b__left face"> </div>
+      <div class="door-b__top face"> </div>
+      <div class="door-b__bottom face"> </div>
+    </div>
+    <div class="door-t">
+      <div class="door-t__front face"> </div>
+      <div class="door-t__back face"> </div>
+      <div class="door-t__right face"> </div>
+      <div class="door-t__left face"> </div>
+      <div class="door-t__top face"> </div>
+      <div class="door-t__bottom face"></div>
+    </div>
+  </div>
+</div>
+
+    <div class="content">
+      <div class="text">Admin-SignUp</div>
+    
+    
+  <form  method="post" action="/adminregistered" onsubmit="return alert('You will be redirected to login to confirm registration')" >
+    <input type="hidden"  id="gender" name="gender" value="{{Gen}}" >
+    <div class="field">
+
+  <input type="text"  name="fname" id="fname" placeholder="First Name" required value="" onkeydown="return (event.keyCode > 64 &&
+  event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 8) || (event.keyCode == 9) || (event.keyCode == 32)" />
+    </div>
+    <div class="field">
+
+    <input type="text"  name="sname" id="sname" placeholder="Last Name" required value="" onkeydown="return (event.keyCode > 64 &&
+  event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || (event.keyCode == 8) || (event.keyCode == 9) || (event.keyCode == 32)" />
+    </div>
+    <div class="field">
+
+    <input type="email" name="email" placeholder="email" required value=""/>
+    </div>
+    <div class="field">
+
+    <input ng-model="password" type="password" name="userPassword" placeholder="Enter Password" ng-required="true"  value=""/>
+    </div>
+    <div class="field">
+
+    <input ng-model="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" ng-required="true" value=""/>
+
+    <span ng-show="password!=confirmPassword">Password mismatch</span>
+    </div>
+    <div class="field">
+
+	  <input type="date" id="dob" name="dob" required value=""/>
+    </div>
+  <!-- <div class="checkbox-inline"> -->
+	<!-- <label class="btn btn-sm"> -->
+    <div class="option">
+    <!-- <div class="field"> -->
+      <input type="radio" class="custom-control-input" ng-model="Gen" id="Male" value="Male" ng-checked="true">Male
+    
+      <input type="radio" class="custom-control-input" ng-model="Gen" id="Female" value="Female">Female
+  
+      <input type="radio" class="custom-control-input" ng-model="Gen" id="Others" value="Others">Others
+      </div>
+
+	<!-- Radio button other methods
+	<label class="btn btn-default active">
+          <input type="radio" id="q156" name="quality[25]" value="1" checked="checked" /> Normal
+        </label>
+	<div class="custom-control custom-radio">
+	  <input type="radio" class="custom-control-input" ng-model="Gen" id="Male" value="Male" ng-checked="true">
+	  <label class="custom-control-label" for="Male">Male</label>
+      <input type="radio" class="custom-control-input" ng-model="Gen" id="Female" value="Female">
+      <label class="custom-control-label" for="Female">Female</label>
+	  <input type="radio" class="custom-control-input" ng-model="Gen" id="Other" value="Others">
+	  <label class="custom-control-label" for="Others">Others</label>
+	  </div>	
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+  <label class="custom-control-label" for="defaultChecked">Default checked</label>
+</div>
+--><div class="field">
+
+  <input type="text"   name="phone" id="phone" placeholder="Enter phone" onkeydown="return (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 8) 
+  || (event.keyCode == 9)" maxlength="10" required value="" />
+</div>
+
+
+<!--    <input type="number"   name="phone" id="phone" placeholder="Enter phone" onKeyPress="if(this.value.length==10) return false;" required value=""/>
+	<button type="submit"  >Submit</button> <br>
+    -->
+	<button type="submit"  >Submit</button> <br>
+
+	
+  </form>
+</main>
+<script src="js/adminreg.js"></script>
+</body>
+</html>

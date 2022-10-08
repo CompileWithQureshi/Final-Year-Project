@@ -1,0 +1,111 @@
+<html>
+<head>
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/price-range.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/flatuser.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/flatcat.js"></script>
+</head>
+
+
+<body class="container" ng-app="myApp" ng-controller="MainCtrl">
+
+
+<main>
+   </section><!--/slider-->
+  <div class="container">
+   
+
+<div class="content">
+  <button type="button"  class="btn btn-primary btn-block" ng-click="getDataflatkathaA()">GET A KATHA FLAT</button>
+  <button type="button"  class="btn btn-primary btn-block" ng-click="getDataflatkathaB()">GET B KATHA FLAT</button>
+  <!-- </div>  -->
+  </div>
+
+  <form  method="post" action="/booking" ng-submit="store()">
+
+    
+      <h2 class="title text-center">Living Quarters</h2>
+
+
+
+  <!--
+  <div class="col-lg-3">
+              <div ng-repeat="x in childrenCat" ng-click="getData($index)">
+              {{x.pCode}}<br>
+              </div>
+          </div>
+    -->
+
+<!-- <div class="col-lg-5"> -->
+
+<div ng-repeat="prod in prods">
+<!-- <div class="col-lg-4"> -->
+        <!-- <div class="product-image-wrapper"> -->
+          <!-- <div class="single"> -->
+            
+            
+
+<div class="content holder">
+              
+              <!-- <div class="productinfo text-center"> -->
+                      <img width="100%" height="250px" ng-src="images/products/{{prod.pImage}}" alt="" />
+                      <h2>Rs. {{prod.pCost}}</h2>
+                      <h3>{{prod.pCode}}</h3>
+              <h3>{{prod.hosName}}</h3>
+              <h3>{{prod.pDisc}}</h3>
+      <div class="btn-center">
+              
+      <button type="button" class="chart" ng-click="add($index)">Add to Cart</button> 
+      <input type="hidden"  ng-model="pCode" value={{prod.pCode}}>
+      <input type="hidden"  ng-model="pCost" value={{prod.pCost}}>
+      <input type="hidden"  ng-model="pName" value={{prod.hosName}}>
+      </div>
+            </div>
+            </div>
+          </div>
+              <div class="bubbles">
+      <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    
+  </div>
+        <!-- </div> -->
+            <!-- <div class="product-overlay">
+              <div class="overlay-content">
+                <h2>Rs. {{prod.pCost}}</h2>
+                <p>{{prod.pCode}}</p> -->
+ 
+
+
+   
+
+ 
+  <button type="submit" class="ok">Proceed to Booking</button>
+
+<input type="hidden"  id="products" name="products" value="">
+</div>
+<!-- <div class="content"> -->
+<div class="col-lg-2  data" ng-repeat="prodToAdd in prodsToAdd"><b><Details></Details></b>{{prodToAdd.pCode}} {{prodToAdd.pCost}} {{prodToAdd.hosName}} </div>
+</div>
+</form>
+</div>
+</main>
+</body>
+</html>

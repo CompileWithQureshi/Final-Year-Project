@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/price-range.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/adminlogin.css" />
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/adminlogin.js"></script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="MainCtrl">
+    <main id="form">
+        <div class="content">
+          <img src="images/newImages/Logo.png" alt="logo-img">
+          <div class="text"  <%=username%>> Admin-LOGIN </div>
+          <!-- <form method="post" action="/apparels"> -->
+            <form method="post" action="/adminapparels">
+
+              <div class="field">
+                <div class="fas fa-user"></div>
+                
+  
+              <input type="text"  name="userid" placeholder="userid" required value=""/>
+  
+              </div> 
+              <div class="field">
+                  
+                <div class="fas fa-envelope"></div>
+                      <input type="text" name="email" placeholder="Email " required   value="" autocomplete="email"/>
+              </div>
+              <div class="field">
+                <div class="fas fa-lock"></div>
+                   <input type="password" 
+                   name="userPassword"
+                   placeholder="Password"  required value=""/>
+              </div>
+              
+              <button type="submit">Login</button>
+              <!-- <div class="link">Not a member?  -->
+                <!-- <a href="#">Signup now</a> -->
+            <!-- </div> -->
+             </form>
+              </div>
+              
+              <!--/login form-->
+        
+                <!--sign up form-->
+                <div class="text">
+                    <h2>OR</h2>
+                  </div>
+                <div class="content">
+                    <img src="images/newImages/Logo.png" alt="logo-img">
+            
+                    <div class="text">Signup</div>
+                    <form method="post" action="/adminregister">
+                      <button type="submit" class="btn btn-default">Signup</button>
+                    </form>
+                  </div>
+                
+              <!--/sign up form-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/form-->
+
+      <!--
+    <form  method="post" action="/billing">
+        <input type="hidden"  id="prods" name="prods" value="Nothing">
+        <button type="button" ng-click="store()">Call store values</button>
+
+        <button type="submit" class="btn btn-default" >Proceed to billing</button>
+        <div ng-repeat="prodToAdd in prodsToAdd">
+            {{prodToAdd.pCost}} {{prodToAdd.pName}}
+        </div>
+        <button type="button" ng-click="add({pCost: 250, pName: 'Lacoste'})">Add</button>
+    </form>
+-->
+    </main>
+  </body>
+</html>

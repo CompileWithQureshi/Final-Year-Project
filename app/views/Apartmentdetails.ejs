@@ -1,0 +1,167 @@
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="css/prettyPhoto.css" rel="stylesheet"> -->
+  <!-- <link href="css/price-range.css" rel="stylesheet"> -->
+  <!-- <link href="css/animate.css" rel="stylesheet"> -->
+  <!-- <link href="css/main.css" rel="stylesheet"> -->
+  <!-- <link href="css/responsive.css" rel="stylesheet"> -->
+  <!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/> -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+  <link rel="stylesheet" href="css/Apartmentdetails.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/apart.js"></script>   
+
+</head>
+
+
+<body>
+<!-- <div class="container"> -->
+
+
+<body class="helo" ng-app="myApp" ng-controller="MainCtrl">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/apart1.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/index10.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/i1.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/kj.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/index13.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/index14.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/index15.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/index16.jpg"  alt="ApartmentImages"></div>
+      <div class="swiper-slide"><img src="images/products/i2.jpg"  alt="ApartmentImages"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+
+<div class="contaner">
+<div class="content">
+  <form  method="post" action="/adminlogin">
+    <h1>Add Apartment details</h1>
+<input type="text"  name="pCode" id="pCode" placeholder="Apartment Code" required value="" />
+
+<input type="text"   name="pCost" id="pCost" placeholder="Apartment price" onkeydown="return (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 8) 
+|| (event.keyCode == 9)" required value="" />
+
+<input type="text"  name="hosName" id="hosName" placeholder="Apartment Name" required value="" />
+
+        <input type="file" id="fileInput" multiple/>
+        <button type="button" ng-click="showImage()">Show Image</button>
+        <input type="text" name="pImage" id="pImage" >
+        <img  class="inside-Image" ng-src="images/products/{{imageName}}" alt="Image-is-grtting-load" />
+
+<!--
+        <input type="file" id="fileInput" multiple onchange="showname()"/>
+        File onchange event triggers only if we add directive in angularjs
+
+  <input type="file" id="fileUpload" name=" fileUpload" ng-file-model="uploadThisImage" ng-change="showFileName()">
+
+        <input type="file" id="fileUpload" multiple onclick="showFile()" onchange="showFileName()"/>
+        -->
+
+
+<input type="text"  name="pDisc" id="pDisc" placeholder="Property Description" required value=""  />
+
+<select class="browser-default custom-select" id="pCategory" name="pCategory">
+  <option selected>Select Khatha</option>
+  <option value="A Katha">A Katha</option>
+  <option value="B Katha">B Katha</option>
+</select>
+<select class="browser-default custom-select" id="bCategory" name="bCategory">
+  <option selected>Select Bulider Class</option>
+  <option value="Class A">Class A</option>
+  <option value="Class B">Class B</option>
+  <option value="Class C">Class C</option>
+  <option value="Class D">Class D</option>
+  </select>
+<select class="browser-default custom-select" id="vCategory" name="vCategory">
+  <option selected>Select Vasthu</option>
+  <option value="Vayu Moola">Vayu Moola</option>
+  <option value="Pitru Moola">Pitru Moola</option>
+  <option value="Eshanya Moola">Eshanya Moola</option>
+  <option value="Agni Moola">Agni Moola</option>
+  </select>
+<select class="browser-default custom-select" id="aCategory" name="aCategory">
+  <option selected>Select Approved Authorities</option>
+  <option value="BBMP">BBMP</option>
+  <option value="KIDBA">KIDBA</option>
+  <option value="BDA">BDA</option>
+  </select>
+<select class="browser-default custom-select" id="fCategory" name="fCategory">
+  <option selected>Select Facing</option>
+  <option value="North">North</option>
+  <option value="West">West</option>
+  <option value="East">East</option>
+  <option value="South">South</option>
+  
+</select>
+<!--
+<input type="text"   name="pQuantity" id="pQuantity" placeholder="Product Cost" onkeydown="return (event.keyCode > 47 && event.keyCode < 58) || (event.keyCode == 8) 
+|| (event.keyCode == 9)" required value="" />
+-->
+        <button type="button" class="btn btn-default" ng-click="submitData()" >Submit Data</button>
+      </div>  
+      <div class="content">
+        <input type="text"  name="getpCode" id="getpCode" placeholder="Enter Apartment Code" required value="" />
+        <button type="button" class="btn btn-default" ng-click="getData()" >Get Product</button>
+        <button type="button" class="btn btn-default" ng-click="updateData()" >Update Product</button>
+        <button type="button" class="btn btn-default" ng-click="deleteData()" >Delete Product</button>
+	</div>
+<!-- </div>
+</div> -->
+</form>
+<div class=" last">
+  <form  method="post" action="/bookingViewApart">
+    <button type="submit" class="btn btn-default" >View Apartment Booking</button>
+</form>
+</form>
+ 
+</div>
+</div>
+<div class="justSpace">
+  
+</div>
+
+    
+   
+<!--
+  
+  -->
+  <script src="js/ApartmentImages.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+</script>
+</body>
+</html>
